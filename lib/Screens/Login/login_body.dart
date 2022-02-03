@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:suivi_apprenant_odk/config/colors.dart';
 import 'package:suivi_apprenant_odk/config/config.dart';
+import 'package:suivi_apprenant_odk/home.dart';
 
 import 'components/first_login_background.dart';
 
@@ -24,6 +25,8 @@ class _LoginBodyState extends State<LoginBody> {
   void login() async {
     if (_keyForm.currentState!.validate()) {
       // widget.onSubmit(_name);
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => const Home()));
     }
   }
 

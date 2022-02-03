@@ -33,3 +33,36 @@ Widget customTextField(
     ),
   );
 }
+
+Widget customCard(
+    List filteredVariable, Function route, String titre, BuildContext context) {
+  return Padding(
+    padding: const EdgeInsets.only(top: 15, bottom: 5, left: 20, right: 5),
+    child: InkWell(
+      onTap: () {
+        route(context);
+      },
+      child: Container(
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
+            boxShadow: [
+              BoxShadow(
+                  color: Colors.grey.withOpacity(0.2),
+                  spreadRadius: 3,
+                  blurRadius: 5)
+            ],
+            color: Colors.white),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            //  List (filteredVariable);
+            Text(
+              titre,
+              style: const TextStyle(fontWeight: FontWeight.bold),
+            )
+          ],
+        ),
+      ),
+    ),
+  );
+}
